@@ -9,11 +9,12 @@ namespace MentimeterBot
 {
     class BrowserAutomation
     {
+        //ddb0b5
         private string link = "";
         private WebBrowser webBrowser;
-        private int goVoteCode;
+        private string goVoteCode;
 
-        public BrowserAutomation(WebBrowser webBrowser, string link, int goVoteCode)
+        public BrowserAutomation(WebBrowser webBrowser, string link, string goVoteCode)
         {
             this.webBrowser = webBrowser;
             this.link = link;
@@ -22,7 +23,7 @@ namespace MentimeterBot
 
         public void navigateToGovote()
         {
-            webBrowser.Navigate(link);
+            webBrowser.Navigate(link + "/" + goVoteCode);
             waitForPageToLoad();
         }
 
@@ -36,20 +37,35 @@ namespace MentimeterBot
             waitForPageToLoad();
         }
 
-        public void chooseRadioButton()
+        public void chooseRadioButton(int radiobuttonNumber)
         {
-            webBrowser.Document.InvokeScript("applyChanges");
+            int radioButtonsEncountered = 0;
             waitForPageToLoad();
             HtmlElementCollection radioElems = webBrowser.Document.GetElementsByTagName("input");
 
             foreach (HtmlElement element in radioElems)
             {
-                MessageBox.Show(element.Id);
-                /*
-                if (element.InnerHtml.Contains("Send Invitations"))
+                if (element.Name == "vote")
+                {
+                    radioButtonsEncountered++;
+
+                    if (radioButtonsEncountered == radiobuttonNumber)
+                    {
+                        element.InvokeMember("click");
+                    }
+                }
+            }
+        }
+
+        public void submitAnswerRadioButton()
+        {
+            var elements = webBrowser.Document.GetElementsByTagName("input");
+            foreach (HtmlElement element in elements)
+            {
+                if (element.GetAttribute("value").Equals("Submit answer"))
                 {
                     element.InvokeMember("click");
-                }*/
+                }
             }
         }
 

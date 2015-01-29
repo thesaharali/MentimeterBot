@@ -25,11 +25,12 @@ namespace MentimeterBot
         private void buttonStart_Click(object sender, EventArgs e)
         {
             string link = "https://www.govote.at";
-            int goVoteCode = Convert.ToInt32(textBoxCode.Text);
+            string goVoteCode = textBoxCode.Text;
             BrowserAutomation browserAutomation = new BrowserAutomation(webBrowser1, link, goVoteCode);
+            webBrowser1.Navigate("javascript:void((function(){var a,b,c,e,f;f=0;a=document.cookie.split('; ');for(e=0;e<a.length&&a[e];e++){f++;for(b='.'+location.host;b;b=b.replace(/^(?:%5C.|[^%5C.]+)/,'')){for(c=location.pathname;c;c=c.replace(/.$/,'')){document.cookie=(a[e]+'; domain='+b+'; path='+c+'; expires='+new Date((new Date()).getTime()-1e11).toGMTString());}}}})())");
             browserAutomation.navigateToGovote();
-            browserAutomation.enterCodeAndValidate();
-            browserAutomation.chooseRadioButton(); //we only handle the radiobuttons for now
+            browserAutomation.chooseRadioButton(1);
+            browserAutomation.submitAnswerRadioButton();
         }
 
 
