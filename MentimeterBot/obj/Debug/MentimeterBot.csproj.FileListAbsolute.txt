@@ -1,0 +1,1 @@
+C:\Users\Alexandre\Programming\C#\MentimeterBot\MentimeterBot\bin\Debug\MentimeterBot.exe.config
