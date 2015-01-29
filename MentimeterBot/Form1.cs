@@ -21,6 +21,12 @@ namespace MentimeterBot
         public Form1()
         {
             InitializeComponent();
+
+            if (!webBrowser1.Visible)
+            {
+                richTextBoxLog.Location = new System.Drawing.Point(12, 12);
+                richTextBoxLog.Size = new System.Drawing.Size(543, 315);
+            }
             Log log = new Log(richTextBoxLog);
             log.addLog(Color.Black, "------------------------------------------------------------------------");
             log.addLog(Color.Black, "Hello, welcome to MentimeterBot, the automatic voting bot for Mentimeter");
@@ -117,6 +123,26 @@ namespace MentimeterBot
                 }
             }
 
+        }
+
+        private void checkBoxDebug_CheckedChanged(object sender, EventArgs e)
+        {
+            if (webBrowser1.Visible)
+            {
+                webBrowser1.Visible = false;
+                richTextBoxLog.Location = new System.Drawing.Point(12, 12);
+                richTextBoxLog.Size = new System.Drawing.Size(543, 315);
+            }
+            else if (!webBrowser1.Visible)
+            {
+                webBrowser1.Visible = true;
+                this.webBrowser1.Location = new System.Drawing.Point(12, 12);
+                this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+                this.webBrowser1.Size = new System.Drawing.Size(543, 143);
+
+                this.richTextBoxLog.Location = new System.Drawing.Point(12, 161);
+                this.richTextBoxLog.Size = new System.Drawing.Size(543, 172);
+            }
         }
 
     }

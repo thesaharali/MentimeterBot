@@ -36,11 +36,12 @@
             this.textBoxNbrOfVotes = new System.Windows.Forms.TextBox();
             this.richTextBoxLog = new System.Windows.Forms.RichTextBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.checkBoxDebug = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(12, 379);
+            this.buttonStart.Location = new System.Drawing.Point(12, 392);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(198, 23);
             this.buttonStart.TabIndex = 0;
@@ -50,24 +51,31 @@
             // 
             // webBrowser1
             // 
+            this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.webBrowser1.Location = new System.Drawing.Point(12, 12);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(543, 143);
             this.webBrowser1.TabIndex = 1;
+            this.webBrowser1.Visible = false;
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // textBoxCode
             // 
-            this.textBoxCode.Location = new System.Drawing.Point(455, 381);
+            this.textBoxCode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxCode.Location = new System.Drawing.Point(455, 394);
             this.textBoxCode.Name = "textBoxCode";
             this.textBoxCode.Size = new System.Drawing.Size(100, 20);
             this.textBoxCode.TabIndex = 2;
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(401, 384);
+            this.label1.Location = new System.Drawing.Point(401, 398);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 3;
@@ -75,8 +83,10 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(216, 384);
+            this.label2.Location = new System.Drawing.Point(216, 397);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 4;
@@ -84,13 +94,15 @@
             // 
             // textBoxNbrOfVotes
             // 
-            this.textBoxNbrOfVotes.Location = new System.Drawing.Point(310, 381);
+            this.textBoxNbrOfVotes.Location = new System.Drawing.Point(310, 395);
             this.textBoxNbrOfVotes.Name = "textBoxNbrOfVotes";
             this.textBoxNbrOfVotes.Size = new System.Drawing.Size(85, 20);
             this.textBoxNbrOfVotes.TabIndex = 5;
             // 
             // richTextBoxLog
             // 
+            this.richTextBoxLog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxLog.Location = new System.Drawing.Point(12, 161);
             this.richTextBoxLog.Name = "richTextBoxLog";
             this.richTextBoxLog.Size = new System.Drawing.Size(543, 172);
@@ -99,16 +111,30 @@
             // 
             // progressBar1
             // 
+            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar1.Location = new System.Drawing.Point(12, 339);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(543, 23);
             this.progressBar1.TabIndex = 7;
             // 
+            // checkBoxDebug
+            // 
+            this.checkBoxDebug.AutoSize = true;
+            this.checkBoxDebug.Location = new System.Drawing.Point(13, 369);
+            this.checkBoxDebug.Name = "checkBoxDebug";
+            this.checkBoxDebug.Size = new System.Drawing.Size(90, 17);
+            this.checkBoxDebug.TabIndex = 8;
+            this.checkBoxDebug.Text = "Debug mode ";
+            this.checkBoxDebug.UseVisualStyleBackColor = true;
+            this.checkBoxDebug.CheckedChanged += new System.EventHandler(this.checkBoxDebug_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 414);
+            this.ClientSize = new System.Drawing.Size(567, 425);
+            this.Controls.Add(this.checkBoxDebug);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.richTextBoxLog);
             this.Controls.Add(this.textBoxNbrOfVotes);
@@ -134,6 +160,7 @@
         private System.Windows.Forms.TextBox textBoxNbrOfVotes;
         private System.Windows.Forms.RichTextBox richTextBoxLog;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.CheckBox checkBoxDebug;
     }
 }
 
