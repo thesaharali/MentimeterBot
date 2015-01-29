@@ -1,1 +1,9 @@
 C:\Users\Alexandre\Programming\C#\MentimeterBot\MentimeterBot\bin\Debug\MentimeterBot.exe.config
+C:\Users\Alexandre\Programming\C#\MentimeterBot\MentimeterBot\bin\Debug\MentimeterBot.exe
+C:\Users\Alexandre\Programming\C#\MentimeterBot\MentimeterBot\bin\Debug\MentimeterBot.pdb
+C:\Users\Alexandre\Programming\C#\MentimeterBot\MentimeterBot\obj\Debug\MentimeterBot.csprojResolveAssemblyReference.cache
+C:\Users\Alexandre\Programming\C#\MentimeterBot\MentimeterBot\obj\Debug\MentimeterBot.Form1.resources
+C:\Users\Alexandre\Programming\C#\MentimeterBot\MentimeterBot\obj\Debug\MentimeterBot.Properties.Resources.resources
+C:\Users\Alexandre\Programming\C#\MentimeterBot\MentimeterBot\obj\Debug\MentimeterBot.csproj.GenerateResource.Cache
+C:\Users\Alexandre\Programming\C#\MentimeterBot\MentimeterBot\obj\Debug\MentimeterBot.exe
+C:\Users\Alexandre\Programming\C#\MentimeterBot\MentimeterBot\obj\Debug\MentimeterBot.pdb
